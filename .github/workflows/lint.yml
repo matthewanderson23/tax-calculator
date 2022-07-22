@@ -1,0 +1,12 @@
+name: lint
+
+on: pull_request
+
+jobs:
+
+  flake8:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run flake8
+      uses: TrueBrain/actions-flake8@master
